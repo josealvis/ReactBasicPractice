@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 
 import { Header } from './components/Header';
 import { Home } from './components/Home';
+import {TheIncreaseBtn} from './components/TheIncreaseBtn';
 
 
 class App extends React.Component {
@@ -16,6 +17,7 @@ class App extends React.Component {
                         <p>This is a text</p>    
                         </Header>
                         <Home user={user} />
+                        <TheIncreaseBtn label={'The Increase Button'}/>
                     </div>
                 </div>
             </div>
