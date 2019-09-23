@@ -77,7 +77,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/app/";
+/******/ 	__webpack_require__.p = "/";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("var app = document.getElementById('app');\napp.innerHTML = \"Everything works great.\";//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvYXBwL2luZGV4LmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2FwcC9pbmRleC5qcz9mYjA1Il0sInNvdXJjZXNDb250ZW50IjpbIlxyXG4gbGV0IGFwcCAgPSAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2FwcCcpO1xyXG5cclxuIGFwcC5pbm5lckhUTUwgPSBcIkV2ZXJ5dGhpbmcgd29ya3MgZ3JlYXQuXCIiXSwibWFwcGluZ3MiOiJBQUNBO0FBRUEiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/app/index.js\n");
+eval("var app = document.getElementById('app');\napp.innerHTML = \"Everything works great. this is a webpack configuration klky\"; ////# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvYXBwL2luZGV4LmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2FwcC9pbmRleC5qcz9mYjA1Il0sInNvdXJjZXNDb250ZW50IjpbIlxyXG4gbGV0IGFwcCAgPSAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2FwcCcpO1xyXG5cclxuIGFwcC5pbm5lckhUTUwgPSBcIkV2ZXJ5dGhpbmcgd29ya3MgZ3JlYXQuIHRoaXMgaXMgYSB3ZWJwYWNrIGNvbmZpZ3VyYXRpb24ga2xreVwiO1xyXG4gLy8iXSwibWFwcGluZ3MiOiJBQUNBO0FBRUEiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/app/index.js\n");
 
 /***/ })
 
