@@ -1,6 +1,8 @@
 import React from 'react';
 
 import { TheCallBackBtn } from './utility/TheCallBackBtn'
+import { TheUselessInput } from './utility/TheUselessInput'
+
 
 export class Home extends React.Component {
 
@@ -12,7 +14,11 @@ export class Home extends React.Component {
     msgBox(arg1){
         alert('ok this is from parent'+arg1);
         
-        this.setState({text1 : arg1});
+        this.chageText(arg1)
+    }
+
+    chageText(arg1){
+        this.setState({text1 : arg1});  
     }
 
     render() {
@@ -25,6 +31,7 @@ export class Home extends React.Component {
             {list.map((el, i) => <li key={i}>{el}</li>) }
         </ul>
         <TheCallBackBtn  callback={(arg)=> this.msgBox(arg)}/>
+        <TheUselessInput callback={(arg)=> this.chageText(arg)}/>
         </div>
         );
     }
