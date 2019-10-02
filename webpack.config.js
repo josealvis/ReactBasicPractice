@@ -1,5 +1,5 @@
 var path = require('path');
-const HtmlWebPackPlugin = require("../../../AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/html-webpack-plugin");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 

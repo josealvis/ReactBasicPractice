@@ -1,5 +1,8 @@
 {
   "name": "ReactBasicPractice",
+  "jest": {
+    "verbose": true
+  },
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -29,8 +32,7 @@
     "webpack-dev-server": "^3.8.1"
   },
   "scripts": {
-    "test1": "jest",
-    "test2": "mocha -w  test/*.spec.js",
+    "test": "jest",
     "dev": " npm run build  && webpack-dev-server --env.NODE_ENV=serv",
     "build": "npx webpack -d --env.NODE_ENV=local",
     "buildProd": "npx webpack -p --env.NODE_ENV=pro"

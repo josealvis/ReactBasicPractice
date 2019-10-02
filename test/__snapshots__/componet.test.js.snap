@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Todo component renders the todo correctly renders correctly 1`] = `
+<button
+  className="btn btn-dark"
+  onClick={[Function]}
+  type="button"
+>
+  The Increase Button 1
+</button>
+`;

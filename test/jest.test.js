@@ -10,7 +10,7 @@ test('adds 1 + 2 to equal 3', () => {
 
 
   describe('get age', ()=>{
-      console.log('ok',getAge);
+     // console.log('ok',getAge);
       it('should return 28', ()=>{
           let dateOfbird = new  Date(1991,6, 14);;
           expect(getAge(dateOfbird)).toBe(28);
