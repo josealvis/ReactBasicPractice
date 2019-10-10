@@ -2,29 +2,28 @@ var path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-
 var DIST_DIR = path.resolve(__dirname, 'dist');
 var SRC_DIR = path.resolve(__dirname, 'src');
 
 var config = env => {
     // Use env.<YOUR VARIABLE> here:
     console.log('NODE_ENV: ', env.NODE_ENV); // 'local'
-   
+
 
     let plugins = [];
     plugins.push(
         new HtmlWebPackPlugin({// this plugin create a new index.html with the build in it
-        template: "./src/index.html",
-        filename: "./index.html"
-    }));
+            template: "./public/index.html",
+            filename: "./index.html"
+        }));
 
-    if( env.NODE_ENV !='serv'){
-    plugins.push(new CleanWebpackPlugin());
+    if (env.NODE_ENV != 'serv') {
+        plugins.push(new CleanWebpackPlugin());
     }
 
     return {
         //entry is the file that webpack will look to build your app 
-        entry: SRC_DIR + '/app/index.js',
+        entry: SRC_DIR + '/index.js',
         // auput are the  output, were will go
         output: {
             path: DIST_DIR + '/app',
@@ -46,6 +45,11 @@ var config = env => {
                     }
                 },
                 {
+                    test: /\.css$/i,
+                    use: ['style-loader', 'css-loader']
+
+                },
+                {
                     test: /\.html$/,
                     use: [
                         {
@@ -59,4 +63,5 @@ var config = env => {
         plugins
     };
 }
+
 module.exports = config;
