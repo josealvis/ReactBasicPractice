@@ -1,0 +1,61 @@
+/*this is the main css of the web app*/
+$color: red;
+$topBarHeight: 48px;
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+/*left nav bar*/
+
+#app {
+    display: flex;
+    align-content: stretch;
+    background-color: #FAFAFA;
+    height: 100%;
+    width: 100%;
+}
+
+.ja-left-nav{
+    display: flex;
+    flex-direction: column;
+    background-color: #0091EA;
+    width: 15%;
+    color: white;
+
+    .ja-app-name{
+        height: $topBarHeight;
+        display: flex;
+        align-content: center;
+        padding: 8px;
+        font-size: 1.45em;
+        background-color: #263238;
+    }
+}
+
+.ja-center-container{
+    align-content: stretch;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.ja-top-panel{
+        height: $topBarHeight;
+        display: flex;
+        flex-direction: row-reverse;
+        align-content: center;
+        padding: 8px;
+        font-size: 1.2em;
+        color: white;
+        background-color: #616161; 
+}
+
+
+
+
+
+

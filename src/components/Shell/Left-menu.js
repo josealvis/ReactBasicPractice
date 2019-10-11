@@ -6,7 +6,10 @@ export class LeltMenu extends React.Component {
 
     render() {
         return (
-            <div className="col-md-2" style={{ backgroundColor: 'red' }}>
+            <div className="ja-left-nav">
+                <div className='ja-app-name'>
+                <spam> APPNAME</spam>
+                </div>
                 <div  >
                     <ul className="nav flex-column">
                         <li className="nav-item">

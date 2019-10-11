@@ -1,5 +1,5 @@
 //css
-import './index.css';
+import './index.scss';
 //React
 import React from 'react';
 import { render } from 'react-dom';
@@ -10,6 +10,7 @@ import Container from '@material-ui/core/Container';
 //app Components
 import { LeltMenu } from './components/Shell/Left-menu';
 import { Shell } from './components/Shell/Shell'
+import { TopPanel } from './components/Shell/TopPanel';
 //import { Header } from './components/Header';
 //import { Home } from './components/Home';
 //import { TheIncreaseBtn } from './components/TheIncreaseBtn';
@@ -21,10 +22,9 @@ class App extends React.Component {
         return (
 
             <Router >
-                <div className="container-fluid">
-                    <div class="row" style={{ flexGrow : 1 }}>
-                    <LeltMenu />
-                    <div  className="col-8">
+                <LeltMenu />
+                <div className="ja-center-container">
+                    <TopPanel />
                     <Switch>
                         <Route path="/about">
                             <Shell />
@@ -36,9 +36,7 @@ class App extends React.Component {
                             <h1>ok2</h1>
                         </Route>
                     </Switch>
-                    </div>
-                    </div>
-                </div >
+                </div>
             </Router>
         );
     }
