@@ -1,4 +1,11 @@
 import React from 'react';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    useParams
+  } from "react-router-dom";
 
 import { TheCallBackBtn } from './utility/TheCallBackBtn'
 import { TheUselessInput } from './utility/TheUselessInput'
@@ -6,9 +13,16 @@ import { TheUselessInput } from './utility/TheUselessInput'
 
 export class Home extends React.Component {
 
-    constructor(){
+    constructor(props){
         super();
         this.state = { text1: 'change this text'};
+        this.id = 0;
+    }
+
+     
+    componentWillMount(){
+        console.log('ok11111', this.props);
+        this.id =this.props.match.params.id;
     }
 
     msgBox(arg1){
@@ -23,10 +37,13 @@ export class Home extends React.Component {
 
     render() {
         let list = ['thought', 'word', 'cat'];
+
         return (
             <div>
+                
                 <h2>{this.state.text1}</h2>
-            <h1>home {this.props.user.name}</h1>
+         <h1>home {1}</h1>
+            <h1>id {this.id}</h1>
         <ul>
             {list.map((el, i) => <li key={i}>{el}</li>) }
         </ul>

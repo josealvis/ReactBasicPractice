@@ -12,9 +12,19 @@ import { LeltMenu } from './components/Shell/Left-menu';
 import { Shell } from './components/Shell/Shell'
 import { TopPanel } from './components/Shell/TopPanel';
 //import { Header } from './components/Header';
-//import { Home } from './components/Home';
+import { Home } from './components/Home';
 //import { TheIncreaseBtn } from './components/TheIncreaseBtn';
 //ok
+//security
+
+import { securityCore} from './security/securityCore';
+let se =  new securityCore();
+console.log(se.userName,':'+ se.isLogged());
+se.logIn('jose','admin');
+console.log(se.userName,':'+ se.isLogged());
+
+console.log(se.isLogged());
+
 
 class App extends React.Component {
     render() {
@@ -25,17 +35,16 @@ class App extends React.Component {
                 <LeltMenu />
                 <div className="ja-center-container">
                     <TopPanel />
+                    {se.isLogged() && 
                     <Switch>
                         <Route path="/about">
                             <Shell />
                         </Route>
-                        <Route path="/users">
-                            <h1>ok1</h1>
-                        </Route>
+                        <Route path="/users/:id"  render={(props)=><Home {...props} user={ {name:'pedro'}}  />}/>
                         <Route path="/">
                             <h1>ok2</h1>
                         </Route>
-                    </Switch>
+                    </Switch>}
                 </div>
             </Router>
         );

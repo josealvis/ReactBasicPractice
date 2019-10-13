@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 export class LeltMenu extends React.Component {
@@ -8,21 +8,21 @@ export class LeltMenu extends React.Component {
         return (
             <div className="ja-left-nav">
                 <div className='ja-app-name'>
-                <spam> APPNAME</spam>
+                <span> APPNAME</span>
                 </div>
                 <div  >
                     <ul className="nav flex-column">
                         <li className="nav-item">
-                            <a className="nav-link active" href="/">Active</a>
+                        <NavLink to={'/'} activeClassName={'link-active'}>Active</NavLink>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="about">Link</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="users">Link</a>
+                            <a className="nav-link" href="users/20">Link</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            <a className="nav-link disabled" href="#" aria-disabled="true">Disabled</a>
                         </li>
                     </ul>
                 </div>
