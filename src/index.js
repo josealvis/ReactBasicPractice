@@ -17,14 +17,9 @@ import { Home } from './components/Home';
 //ok
 //security
 
-import { securityCore} from './security/securityCore';
-let se =  new securityCore();
-console.log(se.userName,':'+ se.isLogged());
-se.logIn('jose','admin');
-console.log(se.userName,':'+ se.isLogged());
-
-console.log(se.isLogged());
-
+import { securityCore } from './security/securityCore';
+let se = new securityCore();
+se.logIn('jose', 'admin');
 
 class App extends React.Component {
     render() {
@@ -35,16 +30,18 @@ class App extends React.Component {
                 <LeltMenu />
                 <div className="ja-center-container">
                     <TopPanel />
-                    {se.isLogged() && 
-                    <Switch>
-                        <Route path="/about">
-                            <Shell />
-                        </Route>
-                        <Route path="/users/:id"  render={(props)=><Home {...props} user={ {name:'pedro'}}  />}/>
-                        <Route path="/">
-                            <h1>ok2</h1>
-                        </Route>
-                    </Switch>}
+                    <div className="container-fluid">
+                        {se.isLogged() &&
+                            <Switch>
+                                <Route path="/about">
+                                    <Shell />
+                                </Route>
+                                <Route path="/users/:id" render={(props) => <Home {...props} user={{ name: 'pedro' }} />} />
+                                <Route path="/">
+                                    <h1>ok2</h1>
+                                </Route>
+                            </Switch>}
+                    </div>
                 </div>
             </Router>
         );

@@ -18,10 +18,12 @@ html, body {
     width: 100%;
 }
 
+
+$activeColor:#0097A7;
 .ja-left-nav{
     display: flex;
     flex-direction: column;
-    background-color: #0091EA;
+    background-color: #00B8D4;
     width: 15%;
     color: white;
 
@@ -30,13 +32,27 @@ html, body {
         display: flex;
         align-content: center;
         padding: 8px;
+        margin-bottom: 20px;
         font-size: 1.45em;
         background-color: #263238;
     }
-
-    .link-active{
-        color: red;
+    .ja-icon{
+        margin-right: 10px;
     }
+
+    .active{
+        background-color: $activeColor !important;
+    }
+
+    .nav-link {
+        color: white; 
+    }
+
+    .nav-link:hover {
+        color: white; 
+        background-color: $activeColor;
+    }
+
 }
 
 
