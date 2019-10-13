@@ -1,4 +1,4 @@
-//css
+/*//css
 import './index.scss';
 //React
 import React from 'react';
@@ -57,3 +57,30 @@ render(<App />, window.document.getElementById('app'));
                 </Header>
                 <Home user={user} />
                 <TheIncreaseBtn label={'The Increase Button'} />*/
+
+
+
+import { createStore } from 'redux';
+
+const reducer = (state, action) => {
+
+    switch (action.type) {
+        case "ADD":
+            state = state + action.payload;
+            break;
+        case "SUBTRACT":
+            state = state - action.payload;
+            break;
+    }
+    return state;
+}
+
+
+const store = createStore(reducer,0);
+
+store.subscribe(() => {
+    console.log("State Updated!!", store.getState());
+});
+
+store.dispatch({type: 'ADD',payload: 10});
+store.dispatch({type: 'ADD',payload: 10});
