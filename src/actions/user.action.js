@@ -4,13 +4,25 @@ import { alertActions } from './';
 import { history } from '../_helpers';
 */
 export const userActions = {
-    login,
+    login2,
 };
+
+
+function login2(dispatch){
+    return (username, password) =>{
+        dispatch(success(username));
+    }
+    
+
+    function request(user) { return { type: userConstants.LOGIN_REQUEST, user } }
+    function success(user) { return { type: userConstants.LOGIN_SUCCESS, user } }
+    function failure(error) { return { type: userConstants.LOGIN_FAILURE, error } }
+
+}
 
 function login(username, password) {
     return dispatch => {
-        dispatch(request({ username }));
-
+        dispatch({ type: userConstants.LOGIN_SUCCESS, user:username } );
       /*  userService.login(username, password)
             .then(
                 user => { 
