@@ -69,13 +69,9 @@ function mapStateToProps(state) {
 
 const mapDispachToProp = (dispatch)=>{
 return{
-    login: userActions.login2(dispatch)
+    login: userActions.login(dispatch)
 }
 }
-
-const actionCreators = {
-    login: userActions.login2
-};
 
 const connectedLoginPage = connect(mapStateToProps, mapDispachToProp)(LoginPage);
 export { connectedLoginPage as LoginPage };

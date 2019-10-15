@@ -1,6 +1,7 @@
 var path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 var DIST_DIR = path.resolve(__dirname, 'dist');
 var SRC_DIR = path.resolve(__dirname, 'src');
@@ -16,9 +17,10 @@ var config = env => {
             template: "./public/index.html",
             filename: "./index.html"
         }));
+    plugins.push(new CleanWebpackPlugin());
 
     if (env.NODE_ENV != 'serv') {
-        plugins.push(new CleanWebpackPlugin());
+        plugins.push(new FriendlyErrorsWebpackPlugin());
     }
 
     return {
