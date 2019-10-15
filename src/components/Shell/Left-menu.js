@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
+import {appStrings} from '../../appCofig/config';
 
 
 export class LeltMenu extends React.Component {
@@ -8,7 +9,7 @@ export class LeltMenu extends React.Component {
         return (
             <div className="ja-left-nav">
                 <div className='ja-app-name'>
-                <span> APPNAME</span>
+                <span> {appStrings.appName}</span>
                 </div>
                 <div  >
                     <ul className="nav flex-column">
