@@ -1,3 +1,4 @@
+
 class securityCore {
     constructor() {
         this.logged = false;
@@ -8,12 +9,14 @@ class securityCore {
     logIn(username , pass) {
         this.userName = username;
         if (pass === 'admin') {
+            localStorage.setItem('user','jose');
             this.logged = true;
         } else alert('Wrong pass!!!');
     }
 
     logOut(){
-        this.logged = false;  
+        this.logged = false;
+        localStorage.clear();  
     }
 
     isLogged() {

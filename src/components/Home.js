@@ -9,6 +9,7 @@ import {
 
 import { TheCallBackBtn } from './utility/TheCallBackBtn'
 import { TheUselessInput } from './utility/TheUselessInput'
+import {appStrings} from '../appCofig/config';
 
 
 export class Home extends React.Component {
@@ -42,7 +43,7 @@ export class Home extends React.Component {
             <div>
                 
                 <h2>{this.state.text1}</h2>
-         <h1>home {1}</h1>
+         <h1>home {appStrings.appName}</h1>
             <h1>id {this.id}</h1>
         <ul>
             {list.map((el, i) => <li key={i}>{el}</li>) }

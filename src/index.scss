@@ -76,6 +76,54 @@ $activeColor:#0097A7;
         background-color: #616161; 
 }
 
+.ja-login-box{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+/*utility*/
+.ja-card{
+    display: flex;
+    margin-top: 30px;
+    background-color: white;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 1px solid #EEEEEE;
+    padding: 20px;
+    width: 450px;
+    height: 600px;
+
+    h2{
+        align-self: center
+    }
+   .ja-content{
+       display: flex;
+       flex-direction: column;
+       padding-top: 50px;
+       align-items: center;
+
+       button{
+           font-weight: bold;
+           width: 100%;
+           padding-top: 20px;
+           padding-bottom: 20px;
+           margin-bottom: 10px;
+       }
+   }
+
+   input{
+       margin-bottom: 20px;
+   }
+
+
+}
+
+
+
+
+
 
 
 

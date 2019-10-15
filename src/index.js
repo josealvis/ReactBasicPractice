@@ -6,7 +6,7 @@ import { render } from 'react-dom';
 
 //redux
 import { Provider } from 'react-redux';
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { createStore, combineReducers, applyMiddleware,} from 'redux';
 import { createLogger } from 'redux-logger';
 //app component
 import { App } from './components/App';
