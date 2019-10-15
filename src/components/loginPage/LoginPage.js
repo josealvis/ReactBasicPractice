@@ -2,11 +2,11 @@ import React from 'react';
 
 export class LoginPage extends React.Component {
     render() {
-        return (<div className='ja-login-box'>
-            <div className="ja-card">
+        return (<div className='ja-login-box ja-login-card'>
+            <div className="ja-card" style={{width:'450px'}}>
                 <h2>Log in</h2>
                 <p>this a text</p>
-                <div class="ja-content">
+                <div className="ja-content">
                     <input className="form-control"
                         type="text"
                         placeholder="UserName"
@@ -16,10 +16,6 @@ export class LoginPage extends React.Component {
                         placeholder="password"
                     />
                     <button type="button" className="btn btn-warning" >LOG IN </button>
-                    <p>OR</p>
-                    <button type="button" className="btn btn-danger" >GOOGLE </button>
-                    <button type="button" className="btn btn-success" >FACEBOOK </button>
-
                 </div>
 
             </div>

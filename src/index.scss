@@ -90,11 +90,12 @@ justify-content: center;
     background-color: white;
     flex-direction: column;
     border-radius: 5px;
-    border: 1px solid #EEEEEE;
+    border: 1px solid #E0E0E0;
     padding: 20px;
-    width: 450px;
-    height: 600px;
+  
+}
 
+.ja-login-card{
     h2{
         align-self: center
     }
@@ -102,6 +103,7 @@ justify-content: center;
        display: flex;
        flex-direction: column;
        padding-top: 50px;
+       padding-bottom: 50px;
        align-items: center;
 
        button{
