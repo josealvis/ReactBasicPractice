@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { userActions } from '../../actions/user.action';
 
+import { history } from '../../helpers/history';
+
 class LoginPage extends React.Component {
 
     constructor(props) {
@@ -24,6 +26,7 @@ class LoginPage extends React.Component {
     handleSubmit(e) {
        e.preventDefault();
 
+       history.push('/user/333');
         this.setState({ submitted: true });
         const { username, password } = this.state;
 

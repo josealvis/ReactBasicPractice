@@ -17,10 +17,9 @@ function login(dispatch) {
         if (password === 'admin') {
             localStorage.setItem('user', username);
             dispatch(success(username));
-
+            history.push('/user/'+username);
         } else alert('Wrong pass!!!');
     }
-
 
     function request(user) { return { type: userConstants.LOGIN_REQUEST, user } }
     function success(user) { return { type: userConstants.LOGIN_SUCCESS, user } }
