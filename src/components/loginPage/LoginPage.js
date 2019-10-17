@@ -70,11 +70,15 @@ function mapStateToProps(state) {
     return { loggingIn: state.authentication };// autentication reducer
 }
 
-const mapDispachToProp = (dispatch)=>{
+/*const mapDispachToProp = (dispatch)=>{
 return{
     login: userActions.login(dispatch)
 }
-}
+}*/
+
+const mapDispachToProp = {
+    login: userActions.login,
+};
 
 const connectedLoginPage = connect(mapStateToProps, mapDispachToProp)(LoginPage);
 export { connectedLoginPage as LoginPage };

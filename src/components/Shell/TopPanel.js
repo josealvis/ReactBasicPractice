@@ -31,10 +31,8 @@ function mapStateToProps(state) {
     return { loggingIn: state.authentication };// autentication reducer
 }
 
-const mapDispachToProp = (dispatch) => {
-    return {
-        logout: userActions.logout(dispatch)
-    }
+const mapDispachToProp =  {
+        logout: userActions.logout
 }
 
 const connectedLoginPage = connect(mapStateToProps, mapDispachToProp)(TopPanel);

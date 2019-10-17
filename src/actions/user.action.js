@@ -11,13 +11,15 @@ export const userActions = {
 };
 
 
-function login(dispatch) {
-    return (username, password) => {
-
+function login(username, password) {
+    return dispatch => {
+      
         if (password === 'admin') {
-            localStorage.setItem('user', username);
-            dispatch(success(username));
-            history.push('/user/'+username);
+            setTimeout(()=>{
+                localStorage.setItem('user', username);
+                dispatch(success(username));
+                history.push('/user/'+username);
+            },2000);
         } else alert('Wrong pass!!!');
     }
 
@@ -26,8 +28,10 @@ function login(dispatch) {
     function failure(error) { return { type: userConstants.LOGIN_FAILURE, error } }
 }
 
-function logout(dispatch){
-    return () =>{
+
+
+function logout(){
+    return dispatch =>{
         localStorage.clear(); 
         dispatch({ type: userConstants.LOGOUT});
         history.push('/login');
