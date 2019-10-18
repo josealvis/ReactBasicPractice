@@ -1,4 +1,4 @@
-import  {TheIncreaseBtn} from '../src/app/components/TheIncreaseBtn';
+import  {TheIncreaseBtn} from '../src/components/utility/TheIncreaseBtn';
 import React from 'react';
 
 import renderer from 'react-test-renderer';

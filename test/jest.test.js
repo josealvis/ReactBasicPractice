@@ -1,6 +1,6 @@
 
 import React from 'react';
-import {getAge } from '../src/app/functions/getAgeFromDate'
+import {getAge } from '../src/functions/getAgeFromDate'
 
 //const ageFunc = require('../src/app/functions/getAgeFromDate');
 

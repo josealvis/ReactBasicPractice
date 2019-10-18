@@ -24,9 +24,9 @@ class LoginPage extends React.Component {
     }
 
     handleSubmit(e) {
-       e.preventDefault();
+        e.preventDefault();
 
-       history.push('/user/333');
+        history.push('/user/333');
         this.setState({ submitted: true });
         const { username, password } = this.state;
 
@@ -38,30 +38,32 @@ class LoginPage extends React.Component {
     render() {
         const { loggingIn } = this.props;
         const { username, password, submitted } = this.state;
-        return (<div className='ja-login-box ja-login-card'>
-            <div className="ja-card" style={{ width: '450px' }}>
-                <h2>Log in</h2>
-                <p>this a text</p>
-                <div className="ja-content">
-                    <form name="form" onSubmit={this.handleSubmit}>
-                        <input className="form-control"
-                            type="text"
-                            value={username} name="username" onChange={this.handleChange}
-                            placeholder="UserName"
-                        />
-                        <input className="form-control"
-                            type="password"
-                            value={password} 
-                            name="password"
-                            onChange={this.handleChange}
-                            placeholder="password"
-                        />
-                        <button  className="btn btn-warning" >LOG IN </button>
-                    </form>
+        return (
+            <div className="ja-center-container">
+                <div className='ja-login-box ja-login-card'>
+                    <div className="ja-card" style={{ width: '450px' }}>
+                        <h2>Log in</h2>
+                        <p>this a text</p>
+                        <div className="ja-content">
+                            <form name="form" onSubmit={this.handleSubmit}>
+                                <input className="form-control"
+                                    type="text"
+                                    value={username} name="username" onChange={this.handleChange}
+                                    placeholder="UserName"
+                                />
+                                <input className="form-control"
+                                    type="password"
+                                    value={password}
+                                    name="password"
+                                    onChange={this.handleChange}
+                                    placeholder="password"
+                                />
+                                <button className="btn btn-warning" >LOG IN </button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-
-            </div>
-        </div>);
+            </div>);
     }
 }
 

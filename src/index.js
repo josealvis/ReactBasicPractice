@@ -10,6 +10,5 @@ import { App } from './components/App';
 //redux store
 import { store } from './helpers/store';
 
-
 //component has to be in uppercase
 render(<Provider store={store} ><App/></Provider>,window.document.getElementById('app'));

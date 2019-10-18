@@ -1,10 +1,6 @@
 import { userConstants } from '../appCofig/constants/user.constants';
-import { actionCreator} from './actionCreator'
 import {history} from '../helpers/history';
-/*import { userService } from '../_services';
-import { alertActions } from './';
-import { history } from '../_helpers';
-*/
+
 export const userActions = {
     login,
     logout
@@ -18,7 +14,7 @@ function login(username, password) {
             setTimeout(()=>{
                 localStorage.setItem('user', username);
                 dispatch(success(username));
-                history.push('/user/'+username);
+                history.push('/home/user');
             },2000);
         } else alert('Wrong pass!!!');
     }

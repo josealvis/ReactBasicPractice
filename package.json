@@ -46,7 +46,7 @@
   },
   "scripts": {
     "lint": "eslint src/index.js",
-    "test": "jest securityCore.test.js",
+    "test": "jest",
     "dev": " npm run build  && webpack-dev-server --env.NODE_ENV=serv --history-api-fallback",
     "build": "npx webpack -d --env.NODE_ENV=local",
     "buildProd": "npx webpack -p --env.NODE_ENV=pro"

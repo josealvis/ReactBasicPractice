@@ -50,6 +50,7 @@ export class Home extends React.Component {
         </ul>
         <TheCallBackBtn  callback={(arg)=> this.msgBox(arg)}/>
         <TheUselessInput callback={(arg)=> this.chageText(arg)}/>
+        {this.props.children}
         </div>
         );
     }
