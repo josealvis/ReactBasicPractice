@@ -22,7 +22,6 @@ export class Home extends React.Component {
 
      
     componentWillMount(){
-        console.log('ok11111', this.props);
         this.id =this.props.match.params.id;
     }
 

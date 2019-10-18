@@ -75,12 +75,16 @@ $activeColor:#0097A7;
 .ja-top-panel{
         height: $topBarHeight;
         display: flex;
-        flex-direction: row-reverse;
+        justify-content: flex-end;
         align-content: center;
         padding: 8px;
         font-size: 1.2em;
         color: white;
-        background-color: #616161; 
+        background-color: #616161;
+        
+        div{
+            padding-right: 10px;
+        }
 }
 
 .ja-login-box{

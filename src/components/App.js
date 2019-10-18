@@ -1,6 +1,6 @@
 //React
 import React from "react";
-import { Router, Switch, Route, Link } from "react-router-dom";
+import { Router, Switch, Route, Link, Redirect } from "react-router-dom";
 import { history } from "../helpers/history";
 
 //app Components
@@ -15,6 +15,7 @@ export class App extends React.Component {
                 <Switch>
                     <PrivateRoute path="/home" component={Shell} />
                     <Route path="/login" render={(props) => <LoginPage {...props} />} />
+                    <Redirect from="*" to="/home" />
                 </Switch>
             </Router>
         );
